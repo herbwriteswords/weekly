@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Weekly</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Weekly">
+<meta name="theme-color" content="#f4f3ef">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="styles.css">
+</head><body>
+<header class="top">
+  <h1>WEEKLY</h1>
+  <div class="sub"><span></span><em>CREATE / GROW / STAY CONSISTENT</em><span></span></div>
+  <nav class="views"><button data-view="day">Day</button><button data-view="week">Week</button><button data-view="month">Month</button></nav>
+  <div class="range"><button id="prev" aria-label="Previous">‹</button><button id="label"></button><button id="next" aria-label="Next">›</button><button id="today">Today</button></div>
+</header>
+<main id="main"></main>
+<button id="fab" aria-label="Add sticker">+</button>
+<section id="tray" class="sheet hidden"><div class="grab"></div><div class="sheet-h">Stickers <small>drag onto a day, or tap to add</small><button class="x" data-close>×</button></div><div id="stickers"></div></section>
+<section id="editor" class="sheet hidden"></section>
+<div id="scrim" class="hidden"></div>
+<script src="app.js"></script>
+</body></html>
