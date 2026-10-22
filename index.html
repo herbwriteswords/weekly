@@ -6,22 +6,34 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Weekly">
-<meta name="theme-color" content="#f4f3ef">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#f4f3ef" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#161918" media="(prefers-color-scheme: dark)">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="icons/icon-180.png">
-<link rel="icon" href="icons/icon-192.png">
+<link rel="icon" href="icons/logo.svg" type="image/svg+xml">
 <link rel="stylesheet" href="styles.css">
+<script>/* apply theme before paint */try{var t=(JSON.parse(localStorage.getItem('weekly-v1'))||{}).settings;t=t&&t.theme||'system';if(t==='system')t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.dataset.theme=t}catch(e){}</script>
 </head><body>
 <header class="top">
+  <svg class="logo" viewBox="0 0 100 100" aria-hidden="true"><path d="M14 26c-2 6 0 14 2 22 1 6 2 11 5 15 4 7 8 12 13 12h9c3 0 5-2 7-5 3-6 5-13 6-20 1-8 2-15 1-23 0-2-1-2-3-2h-6c-2 0-2 1-2 3-1 6-1 14-1 20 2 4 5 6 7 10 2 5 3 10 6 13 1 2 2 3 4 3h10c2 0 3-2 4-5 3-10 4-21 5-31 2-12 4-23 5-31"/></svg>
   <h1>WEEKLY</h1>
   <div class="sub"><span></span><em>CREATE / GROW / STAY CONSISTENT</em><span></span></div>
   <nav class="views"><button data-view="day">Day</button><button data-view="week">Week</button><button data-view="month">Month</button></nav>
   <div class="range"><button id="prev" aria-label="Previous">‹</button><button id="label"></button><button id="next" aria-label="Next">›</button><button id="today">Today</button></div>
 </header>
 <main id="main"></main>
+<button id="settingsBtn" aria-label="Settings"><svg viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></svg><span>Settings</span></button>
 <button id="fab" aria-label="Add sticker">+</button>
-<section id="tray" class="sheet hidden"><div class="grab"></div><div class="sheet-h">Stickers <small>drag onto a day, or tap to add</small><button class="x" data-close>×</button></div><div id="stickers"></div></section>
-<section id="editor" class="sheet hidden"></section>
+<section id="tray" class="sheet hidden"><div class="grab"></div><div class="sheet-h">Stickers <small>tap to add · hold to drag</small><button class="x" data-close aria-label="Close">×</button></div><div id="stickers"></div></section>
+<section id="editor" class="sheet tall hidden"></section>
+<section id="library" class="sheet tall hidden"></section>
+<section id="settings" class="page hidden"></section>
+<section id="recap" class="page recap hidden"></section>
+<section id="viewer" class="viewer hidden"></section>
 <div id="scrim" class="hidden"></div>
+<div id="toast" class="hidden"></div>
+<script src="config.js"></script>
+<script src="iconlib.js"></script>
 <script src="app.js"></script>
 </body></html>
