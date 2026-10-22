@@ -1,0 +1,14 @@
+name = "weekly-push"
+main = "src/index.js"
+compatibility_date = "2026-10-01"
+
+[[kv_namespaces]]
+binding = "SUBS"
+id = "cb7011a2da504692937e7e9d744dfe4d"   # deploy.sh fills this in
+
+[triggers]
+crons = ["*/5 * * * *"]
+
+[vars]
+ALLOWED_ORIGIN = "https://herbwriteswords.github.io"
+# Secrets (wrangler secret put): VAPID_PUBLIC_KEY, VAPID_PRIVATE_KEY, VAPID_SUBJECT, APP_KEY

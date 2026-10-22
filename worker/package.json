@@ -1,0 +1,3 @@
+{ "name": "weekly-push", "private": true, "type": "module",
+  "scripts": { "test": "node --test test/*.test.mjs", "deploy": "./deploy.sh" },
+  "dependencies": { "@block65/webcrypto-web-push": "^2.0.0" }, "devDependencies": { "wrangler": "^4" } }
