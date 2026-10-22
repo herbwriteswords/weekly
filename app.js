@@ -360,7 +360,7 @@ function drawSettings(){
    <div class="set"><span class="k">Backup<small>Plan and settings (photos stay on this phone)</small></span><button class="btn" data-tool="export">Export</button><button class="btn" data-tool="import">Import</button></div>
    <div class="set"><span class="k">Load sample week</span><button class="btn" data-tool="sample">Load</button></div>
    <div class="set"><span class="k">Start blank<small>Clears all stickers, notes and checkmarks</small></span><button class="btn red" data-tool="blank">Reset</button></div></div></div>
-  <div class="about"><svg class="logo" viewBox="0 0 100 100"><path d="M14 26c-2 6 0 14 2 22 1 6 2 11 5 15 4 7 8 12 13 12h9c3 0 5-2 7-5 3-6 5-13 6-20 1-8 2-15 1-23 0-2-1-2-3-2h-6c-2 0-2 1-2 3-1 6-1 14-1 20 2 4 5 6 7 10 2 5 3 10 6 13 1 2 2 3 4 3h10c2 0 3-2 4-5 3-10 4-21 5-31 2-12 4-23 5-31"/></svg><br>
+  <div class="about"><span class="logo-img"></span><br>
    <b>Weekly</b> · version 2<br>Plan your week with stickers. Create, grow, stay consistent.<br>Everything is saved on this device. Install it from Safari: Share → Add to Home Screen.<br><span style="font-size:10px">Extra icons from Lucide (ISC license).</span></div>`;
   $('#set-x').onclick=()=>{$('#settings').classList.add('hidden');render()};
   $('#s-wake').onchange=e=>{ST.wake=e.target.value||ST.wake;save()};
